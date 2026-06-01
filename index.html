@@ -9,34 +9,61 @@ body{
     margin: 0;
     min-height: 100vh;
     display: flex;
-    flex-direction: column;   /* stack image + text */
     justify-content: center;
     align-items: center;
-    background: #ffffff;
+    background: linear-gradient(135deg, #ffe6f0, #e6f7ff);
+    font-family: Arial, sans-serif;
+}
+
+/* main card */
+.card{
+    background: white;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
     text-align: center;
-    padding: 20px;
+    max-width: 380px;
+    animation: fadeIn 1s ease-in-out;
 }
 
 /* image styling */
-a img{
-    width: 80%;
-    max-width: 1080px;
-    height: auto;
-    display: block;
+.card a img{
+    width: 100%;
+    max-width: 320px;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* caption text */
+/* hover effect */
+.card a img:hover{
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+/* text */
 .caption{
     margin-top: 15px;
     font-size: 16px;
-    color: #333;
-    font-family: Arial, sans-serif;
+    color: #444;
     line-height: 1.5;
 }
 
 .pointer{
+    margin-top: 10px;
     font-size: 18px;
-    margin-top: 8px;
+    color: #222;
+}
+
+/* fade animation */
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 </style>
 
@@ -44,16 +71,20 @@ a img{
 
 <body>
 
-<a href="https://cocradowan-collab.github.io/birthday/">
-    <img src="madam.jpg" alt="Clickable Image">
-</a>
+<div class="card">
 
-<div class="caption">
-   <b> tomr ei chok gula dekle sudhu dekhtei mon chay 🫠🫶</b>
-</div>
+    <a href="https://cocradowan-collab.github.io/birthday/">
+        <img src="madam.jpg" alt="Clickable Image">
+    </a>
 
-<div class="pointer">
-    click this photo☝️
+    <div class="caption">
+        tomr ei chok gula dekle sudhu dekhtei mon chay 🫠🫶
+    </div>
+
+    <div class="pointer">
+        👉 click this photo
+    </div>
+
 </div>
 
 </body>
