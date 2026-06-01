@@ -9,12 +9,15 @@ body{
     margin: 0;
     min-height: 100vh;
     display: flex;
-    justify-content: center;   /* center horizontally */
-    align-items: center;       /* center vertically */
+    flex-direction: column;   /* stack image + text */
+    justify-content: center;
+    align-items: center;
     background: #ffffff;
+    text-align: center;
+    padding: 20px;
 }
 
-/* makes image responsive for mobile screens */
+/* image styling */
 a img{
     width: 80%;
     max-width: 350px;
@@ -22,16 +25,18 @@ a img{
     display: block;
 }
 
-/* better fit for tall phones */
-@media (max-height: 1080px){
-    body{
-        padding: 20px;
-    }
+/* caption text */
+.caption{
+    margin-top: 15px;
+    font-size: 16px;
+    color: #333;
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+}
 
-    a img{
-        width: 70%;
-        max-width: 320px;
-    }
+.pointer{
+    font-size: 18px;
+    margin-top: 8px;
 }
 </style>
 
@@ -42,6 +47,14 @@ a img{
 <a href="https://cocradowan-collab.github.io/birthday/">
     <img src="madam.jpg" alt="Clickable Image">
 </a>
-<p align="center">tomr ei chok gula dekle sudhu dekhtei mon chay 🫠🫶</p>
+
+<div class="caption">
+    tomr ei chok gula dekle sudhu dekhtei mon chay 🫠🫶
+</div>
+
+<div class="pointer">
+    👉 click this photo
+</div>
+
 </body>
 </html>
